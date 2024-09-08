@@ -1,0 +1,286 @@
+.projects{
+    background: #fff;
+    padding: 30px 0;
+}
+
+
+.projectsHeading{
+    color: black;
+    font-size: 32px;
+    font-weight: 800; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 30px auto;
+    position: relative;
+    display: inline-block;
+    left: 50%; /* Center alignment */
+    transform: translateX(-50%);
+}
+
+.projectsHeading span{
+    color: var(--main-color);
+}
+
+.projectsHeading::before{
+    content: '';
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    width: 30%;
+    position: absolute;
+    bottom: -5px; /* Adjusted to give some space below the text */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+}
+
+
+.projectsHeading:hover::before{
+    width: 100%;
+}
+
+
+
+
+
+
+/*******Main Section of Projects*******/
+
+
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    grid-column-gap: 10px; /* gap between columns */
+    grid-row-gap: 10px; /* gap between rows */
+    width: 55%;
+    margin: auto;
+}
+
+.project-box {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.3s ease; /* Transition for the scale effect */
+}
+
+.project-box:hover {
+    transform: scale(1.02); /* Scale up on hover */
+    z-index: 11;
+}
+
+
+
+
+.project-box img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+
+.project-box .project-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(rgba(0,0,0,0.1), var(--main-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+
+
+.project-box:hover .project-layer{
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+
+
+.project-layer h4{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-layer p{
+    font-size: 18px;
+    text-align: center;
+    width: 90%;
+}
+
+.project-layer img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+.projectName{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    background: rgba(255, 251, 251, 0.2);
+    font-size: 24px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-box:hover .projectName {
+    opacity: 0; 
+    transition: 0.3s ease;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px){
+
+    .projectsHeading{
+        font-size: 30px;
+        margin: 30px auto;
+    }
+
+    .project-container {
+
+        width: 70%;
+        margin: auto;
+    }
+
+    .project-box{
+        width: 100%;
+    }
+    
+
+
+    
+.project-layer h4{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-layer p{
+    font-size: 18px;
+    text-align: center;
+    width: 90%;
+}
+
+.project-layer img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 1200px){
+    .project-container {
+
+        width: 90%;
+        margin: auto;
+    }
+
+    .project-box{
+        width: 100%;
+    }
+
+
+
+
+    
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    .projectsHeading{
+        font-size: 28px;
+        margin: 30px auto;
+    }
+
+    .project-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    .project-box{
+        width: 80%;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 450px){
+    
+
+    .projectsHeading{
+        font-size: 28px;
+        margin: 30px auto;
+    }
+
+    .project-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    .project-box{
+        width: 90%;
+    }
+
+
+    .project-layer h4{
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .project-layer p{
+        font-size: 14px;
+        text-align: center;
+        width: 90%;
+    }
+    
+    .project-layer img{
+        width: 15px;
+        height: 15px;
+    }
+    
+    
+    }

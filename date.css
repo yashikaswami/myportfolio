@@ -1,0 +1,12 @@
+.project-box #date {
+    position: absolute; /* position the date element absolutely */
+    top: 50%; /* center vertically */
+    left: 50%; /* center horizontally */
+    transform: translate(-50%, -50%); /* adjust for centering */
+    text-align: center; /* center the text */
+    color: black; /* white text, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black background, adjust as needed */
+    border-radius: 5px; /* add some rounded corners */
+    font-size: 23px;
+    padding: 30px 10px;
+  }
