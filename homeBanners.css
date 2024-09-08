@@ -92,17 +92,15 @@
   }
 
   .mainBanner:nth-child(1) img {
-      content: url('mobile1banner.jpg');
+      content: url('banner1mob.jpg');
   }
   .mainBanner:nth-child(2) img {
-      content: url('2banner.jpg');
+      content: url('banner2mob.jpg');
   }
   .mainBanner:nth-child(3) img {
-    content: url('mobile1banner.jpg');
+    content: url('banner3mob.jpg');
   }
-  .mainBanner:nth-child(4) img {
-    content: url('mobile1banner.jpg');
-  }
+ 
 
   .dot {
       height: 5px;
