@@ -1,0 +1,30 @@
+/**************Footer Section*******/
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid #0ef;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+
+.footer .footer-text{font-size: 18px;}
+
+
+.footer .footer-iconTop img{
+    width: 45px;
+    height: auto;
+    border: 1px solid #0dfdfd;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0ef;
+}
+
+
+

@@ -1,0 +1,147 @@
+/* Initially hide elements to animate */
+.fadeInOnScroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation when the element is in view */
+.fadeInOnScroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Other existing CSS */
+.contact {
+    margin-bottom: 30px;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for the contact section */
+
+}
+
+.contactHeading {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Increased spacing for better readability */
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin: 20px auto;
+    padding-bottom: 10px; /* Space for underline */
+}
+
+.contactHeading::before {
+    content: '';
+    height: 4px; /* Thicker line for more impact */
+    background-color: #ffffff; /* White color for the line */
+    width: 30%;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+.contactHeading:hover::before {
+    width: 100%;
+    background-color: #007bff; /* Accent color on hover */
+}
+
+.contactHeading span {
+    color: #007bff; /* Accent color for the span */
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff; /* Light background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Spacing between inputs */
+}
+
+.input-box input,
+textarea {
+    width: calc(50% - 10px); /* Adjust width with gap */
+    padding: 12px;
+    font-size: 16px;
+    background: #f9f9f9; /* Slightly off-white for the form fields */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    margin-bottom: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-box input:focus,
+textarea:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+textarea {
+    width: 100%; /* Full width for textarea */
+    height: 120px;
+    resize: none; /* Disable resizing */
+}
+
+.submitBtn {
+    background-color: #007bff; /* Accent color */
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.submitBtn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.submitBtn:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+    background-color: #004080; /* Even darker color on click */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+
+/* Italic placeholder text */
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+    color: #aaa; /* Optional: Adjust color if needed */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-box input {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
